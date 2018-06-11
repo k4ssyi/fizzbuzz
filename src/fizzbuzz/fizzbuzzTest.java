@@ -9,21 +9,24 @@ public class fizzbuzzTest {
 	public static void main(String[] args) {
 		System.out.println("Hello world");
 
-		int count=0;
 
-		for (int i=1; i<=100; i++) {
-			if (i%3==0 && i%5==0) {
-				System.out.println("fizzbuzz");
-			}
-			else if (i%3==0) {
-				System.out.println("fizz");
-			}
-			else if(i%5==0) {
-				System.out.println("buzz");
-			} else {
-				System.out.println(i);
-			}
+		for (int count=1; count<=100; count++) {
+			System.out.println(toFizzBuzz(count));
 		}
 	}
 
+	//条件式を関数にわける
+	public static String toFizzBuzz(int count) {
+		if (count%3==0 && count%5==0) {
+			return "fizzbuzz";
+		}
+		else if (count%3==0) {
+			return "fizz";
+		}
+		else if(count%5==0) {
+			return "buzz";
+		} else {
+			return ""+count;
+		}
+	}
 }
